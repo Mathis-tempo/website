@@ -20,9 +20,15 @@ $card-bg-color: linear-gradient(
   rgba(115, 115, 115, 0.15) 15%,
   rgba(43, 45, 47, 1) 80%
 );
-$primary-color: #ff073a;
+$primary-color: #2dbe2d;
 
 /* General */
+
+.particles-js-canvas-el {
+  background-color: transparent !important;
+  border: none !important;
+  color: #2dbe2d !important;
+}
 
 html {
   background: $bg-color;
@@ -163,6 +169,7 @@ a {
   .load hr {
     animation: spin 2s ease infinite;
     border: 0;
+    border-radius: 5px;
     height: 40%;
     margin: 0;
     position: absolute;
@@ -246,6 +253,7 @@ a {
   top: 40%;
 }
 
+
 .landing-icons {
   display: flex;
   justify-content: center;
@@ -309,7 +317,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: #d44638;
+      fill: #2dbe2d;
     }
   }
 
@@ -361,7 +369,7 @@ a {
 
   @keyframes colorEmail {
     to {
-      stroke: #b23121;
+      stroke: #2dbe2d;
     }
   }
 
@@ -392,15 +400,15 @@ a {
   }
 
   div[skill-type="language"] {
-    color: #e84a5f;
+    color: #18e922;
   }
 
   div[skill-type="framework"] {
-    color: #ff847c;
+    color: #2d8a1b;
   }
 
   div[skill-type="tool"] {
-    color: #fecea8;
+    color: #b5f1b0;
   }
 
   div[skill-weight="1"] {
