@@ -1,6 +1,6 @@
 setTimeout(function() {
-  fadeOutPreloader(document.getElementById('preloader'), 69);
-}, 1500);
+  fadeOutPreloader(document.getElementById('preloader'), 40);
+}, 1000);
 
 $(document).ready(function() {
   $(window).on('beforeunload', function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
   var period = element.getAttribute('data-period');
   setTimeout(function() {
     new TxtRotate(element, JSON.parse(toRotate), period);
-  }, 1500);
+  }, 1000);
 
   // INJECT CSS
   var css = document.createElement('style');
@@ -88,7 +88,7 @@ TxtRotate.prototype.tick = function() {
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
-  var delta = 200 - Math.random() * 100;
+  var delta = 200 - Math.random() * 140;
 
   if (this.isDeleting) {
     delta /= 5;

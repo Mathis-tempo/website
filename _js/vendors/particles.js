@@ -459,14 +459,41 @@ var pJS = function(tag_id, params) {
         break;
 
       case 'polygon':
-        pJS.fn.vendors.drawShape(
-          pJS.canvas.ctx,
-          p.x - radius / (pJS.particles.shape.polygon.nb_sides / 3.5), // startX
-          p.y - radius / (2.66 / 3.5), // startY
-          radius * 2.66 / (pJS.particles.shape.polygon.nb_sides / 3), // sideLength
-          pJS.particles.shape.polygon.nb_sides, // sideCountNumerator
-          1 // sideCountDenominator
-        );
+          if (pJS.particles.shape.polygon.nb_sides === 4) {
+              // Pour un carré (4 côtés), on utilise une approche avec coins arrondis
+              var cornerRadius = radius * 0.35; // 20% du rayon pour l'arrondi
+              var squareSize = radius * 2;
+              
+              pJS.canvas.ctx.beginPath();
+              pJS.canvas.ctx.moveTo(p.x - radius + cornerRadius, p.y - radius);
+              
+              // Coin supérieur droit
+              pJS.canvas.ctx.lineTo(p.x + radius - cornerRadius, p.y - radius);
+              pJS.canvas.ctx.quadraticCurveTo(p.x + radius, p.y - radius, p.x + radius, p.y - radius + cornerRadius);
+              
+              // Coin inférieur droit
+              pJS.canvas.ctx.lineTo(p.x + radius, p.y + radius - cornerRadius);
+              pJS.canvas.ctx.quadraticCurveTo(p.x + radius, p.y + radius, p.x + radius - cornerRadius, p.y + radius);
+              
+              // Coin inférieur gauche
+              pJS.canvas.ctx.lineTo(p.x - radius + cornerRadius, p.y + radius);
+              pJS.canvas.ctx.quadraticCurveTo(p.x - radius, p.y + radius, p.x - radius, p.y + radius - cornerRadius);
+              
+              // Coin supérieur gauche
+              pJS.canvas.ctx.lineTo(p.x - radius, p.y - radius + cornerRadius);
+              pJS.canvas.ctx.quadraticCurveTo(p.x - radius, p.y - radius, p.x - radius + cornerRadius, p.y - radius);
+              
+          } else {
+              // Pour les autres polygones, gardez le comportement original
+              pJS.fn.vendors.drawShape(
+                  pJS.canvas.ctx,
+                  p.x - radius / (pJS.particles.shape.polygon.nb_sides / 3.5),
+                  p.y - radius / (2.66 / 3.5),
+                  radius * 2.66 / (pJS.particles.shape.polygon.nb_sides / 3),
+                  pJS.particles.shape.polygon.nb_sides,
+                  1
+              );
+          }
         break;
 
       case 'star':

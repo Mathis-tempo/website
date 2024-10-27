@@ -18,7 +18,7 @@ $bg-color: rgba(43, 45, 47, 1);
 $card-bg-color: linear-gradient(
   145deg,
   rgba(115, 115, 115, 0.15) 15%,
-  rgba(43, 45, 47, 1) 80%
+  rgb(14, 14, 15) 80%
 );
 $primary-color: #2dbe2d;
 
@@ -28,7 +28,10 @@ $primary-color: #2dbe2d;
   background-color: transparent !important;
   border: none !important;
   color: #2dbe2d !important;
+  border-radius: 10px;
 }
+
+
 
 html {
   background: $bg-color;
@@ -43,6 +46,14 @@ html {
 body {
   height: 100%;
 }
+
+
+
+::-webkit-scrollbar{
+  width: 0em;
+}
+
+
 
 /* Typography */
 
@@ -67,7 +78,7 @@ a {
 
 .highlight-title {
   color: $primary-color;
-  text-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
+  text-shadow: 0.25rem 0.25rem 0.25rem #056905;
 }
 
 .highlight-link {
