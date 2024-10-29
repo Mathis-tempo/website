@@ -106,13 +106,14 @@ a {
 .layout .card {
   background: $card-bg-color;
   border-radius: 2rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
   padding: 1rem 2rem;
 }
 
 .layout .card .title {
   text-align: center;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .layout .card .subtitle {
@@ -146,12 +147,31 @@ a {
 
 .neumorphism-card {
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 1),
-    inset -2px -2px 4px rgba(99, 99, 99, 1);
+    inset -2px -2px 4px rgb(99, 99, 99);
 }
+
+.tag.neumorphism-card {
+  box-shadow:  2px 2px 4px rgba(0, 0, 0, 1),
+   -1px -1px 2px rgb(99, 99, 99);
+   margin-right: 0.5rem;
+}
+
+
+.time.neumorphism-card {
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 1),
+    inset 0px 0px 0px rgb(99, 99, 99);
+}
+
+.project.neumorphism-card {
+  box-shadow:  2px 2px 4px rgba(0, 0, 0, 1),
+   -1px -1px 2px rgb(99, 99, 99);
+}
+
 
 .neumorphism-card-big {
   box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
 }
+
 
 /* Preloader */
 
@@ -473,7 +493,7 @@ a {
       #d5d5d5 92%,
       #f3f3f3 100%
     );
-    content: " ";
+    content: "";
     height: 100%;
     left: 50%;
     margin-left: -0.0675rem;
@@ -529,10 +549,12 @@ a {
     border-radius: 0.5rem;
     font-weight: $font-weight-strong;
     padding: 0.25rem 0.5rem;
+    margin-right: 10px;
+    margin-left: 10px;
 
     span {
       position: relative;
-      transition: 0.4s;
+      transition: 0.3s;
     }
 
     span:after {
@@ -563,10 +585,10 @@ a {
   }
 
   .time {
-    background: $bg-color;
     border-radius: 0.5rem;
     display: inline-block;
     padding: .6rem;
+    margin-top: -0.2rem;
   }
 
   .desc {
@@ -575,6 +597,9 @@ a {
     margin: 1em 0 0 0;
     padding: 0.75em;
     text-align: center;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 1),
+    -1px -1px 2px rgb(99, 99, 99);
+    margin-right: 0.5rem;
   }
 }
 
@@ -584,6 +609,7 @@ a {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
+  
 }
 
 .project .name-link-wrapper {
@@ -614,6 +640,7 @@ a {
   display: inline-block;
   margin-bottom: 0.25rem;
   padding: 0.5rem;
+  margin-right : 0.25rem;
 }
 
 /* Contact Card */
@@ -839,6 +866,7 @@ a {
     > * {
       width: 44%;
     }
+    
   }
 
   .contact-icons .social-link {

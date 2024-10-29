@@ -26,25 +26,21 @@
 
 {% if site.show_os_projects %}
   <h1 class="title">{{site.os_projects_title}}</h1>
-  {% if site.projects.sort_by == 'stars' %}
-    {% assign sort_order = 'stargazers_count', 'last' %}
-  {% else %}
-    {% assign sort_order = 'pushed_at' %}
-  {% endif %}
 
-  {% if site.projects.exclude.archived && site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.archived %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'fork', false | sort: sort_order | reverse %}
-  {% else %}
-    {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
-  {% endif %}
 
+
+
+  {% assign repo1 = site.github.public_repositories | where: "name", "Java-CY-slide" %}
+  {% assign repo2 = site.github.public_repositories | where: "name", "Accommodation-price-calculator-and-processus-management" %}
+  {% assign repo3 = site.github.public_repositories | where: "name", "website" %}
+
+
+
+  
+  {% assign selected_repos = repo1 | concat: repo2 | concat: repo3 %}
+  
   <div class="projects-wrapper">
-    {% for repository in filtered_repos %}
-      {% unless site.projects.exclude.projects contains repository.name %}
+    {% for repository in selected_repos %}
         <div class="project neumorphism-card" data-aos="zoom-in-down">
           <div class="name-link-wrapper">
             <h3>{{ repository.name }}</h3>
@@ -85,7 +81,6 @@
             </div>
           {% endif %}
         </div>
-      {% endunless %}
     {% endfor %}
   </div>
 {% endif %}

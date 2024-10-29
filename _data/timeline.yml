@@ -5,57 +5,42 @@
 # > tags: List of tags you want to associate with the entry
 # > timeline-side: The side on which you want to display the entry: left or right
 
-# Example of a timeline entry
-# - title: airbnb
-#   title-url: https://example.com/
-#   date: Sep 2019 - Present
-#   subtitle: Fullstack Developer
-#   tags:
-#     - tag: React
-#     - tag: Javascript
-#     - tag: Ruby
-#     - tag: Rails
-#   timeline-side: right
 
-- title: airbnb
-  title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
-  tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
-  timeline-side: right
-
-- title: Google
-  title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
-  tags:
-    - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
-  timeline-side: right
-
-- title: Super University
-  title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+- title: CY Tech engineer school 
+  title-url: https://cytech.cyu.fr/
+  date: Sep 2020 - Sep 2025
+  subtitle: Master’s Degree (M2) in Engineering, Cybersecurity Specialization 
   timeline-side: left
 
-- title: Facebook
-  title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
+- title: TBWA \Paris 
+  title-url: https://www.tbwa-paris.com/fr
+  date: April 2024 - Sep - 2024
+  subtitle: Assistant IT Technician, Systems and Infrastructure Security, 4-month internship
   tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
+    - tag: Server security
+    - tag: Vulnerability management
+    - tag: Incident management
+    - tag: IT intranet development 
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
+- title: Workman LLP, UK, Bristol
+  title-url: https://www.workman.co.uk/
+  date: June 2023 - Sep 2023
+  subtitle: IT security advisor, 3 month internship
+  tags:
+    - tag:  Phishing awareness & employee training 
+    - tag:  Penetration testing 
+    - tag:  Governance, risk and ISO 27000 compliance 
+  timeline-side: left
+
+- title: Chinese diploma
+  title-url: https://www.chinesetest.cn/HSK/3
+  date: March 2022
+  subtitle: HSK 3 
+  timeline-side: right
+
+- title: Lycée des Pierres Vives 
+  title-url: https://lyc-pierresvives-carrieres.ac-versailles.fr/
   date: 2014 - 2017
-  subtitle: B.A. Computer Science
+  subtitle: Baccalaureate 
   timeline-side: left
