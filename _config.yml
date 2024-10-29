@@ -31,7 +31,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: Rigoureux, organisé et passionné par l'analyse, j'évolue dans le domaine de la cybersécurité, où j'apporte des solutions adaptées aux enjeux de sécurité actuels. Ma passion pour la musique m'a appris à travailler en équipe et à être à l'écoute des autres, des qualités que j'applique également dans chacun de mes projets. 
+about_me_description: Rigorous, organized and passionate about analysis, I work in the field of cybersecurity, where I provide solutions adapted to today's security challenges. My passion for music has taught me to work as part of a team and to listen to others, qualities that I also apply to each of my projects. 
 
 # SKILLS SECTION
 # show_skills_card:
